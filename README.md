@@ -49,7 +49,9 @@ Python 3 with modules:\
         it will be searching phase, in first cur.execute sql statement.
         You can rewrite further INSERT statements to use copy in psycopg2,
         but I don't think it will allow to update records faster in general.
-  4) Script will mark modified records in couples.description
+  4) Add in Replay crontab, script will read all existed logs in cdr folder:\
+        `*/10 * * * * python3 /home/directions-fixer.py`\
+        Script will mark modified records in couples.description
         by writing down IP addresses of the recorders.
         If contact center is using that field then you should find
         some other field to mark records.
